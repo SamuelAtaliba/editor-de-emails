@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Relatório</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Relatório</h1>
+        <form id="report-form">
+            <label for="arrival-time">Horário de Chegada:</label>
+            <input type="time" id="arrival-time" required>
+            
+            <label for="departure-time">Horário de Saída:</label>
+            <input type="time" id="departure-time" required>
+            
+            <label for="client-name">Nome do Cliente:</label>
+            <input type="text" id="client-name" required>
+            
+            <label for="travel-expense">Gasto com Deslocamento:</label>
+            <input type="number" id="travel-expense" required>
+            
+            <label for="service-description">Descrição do Serviço:</label>
+            <textarea id="service-description" required></textarea>
+            
+            <label for="requester-name">Nome do Solicitante:</label>
+            <input type="text" id="requester-name" required>
+            
+            <label for="os-number">Número da OS:</label>
+            <input type="text" id="os-number" required>
+            
+            <label for="current-time">Horário Atual:</label>
+            <input type="time" id="current-time" required>
+            
+            <label for="report-date">Data (dia/mês/ano):</label>
+            <input type="date" id="report-date" required>
+            
+            <button type="button" onclick="generateReport()">Gerar Relatório</button>
+        </form>
+        <pre id="report-output"></pre>
+        <button id="copy-button" onclick="copyToClipboard()">Copiar Relatório</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
